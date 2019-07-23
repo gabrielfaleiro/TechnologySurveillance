@@ -16,4 +16,8 @@ https://www.eclipse.org/downloads/
 - Pycharm IDE Python
 https://www.jetbrains.com/pycharm/
 
+## 3D CAD
+
+- FreeCAD - open source
+https://www.freecadweb.org/
 
