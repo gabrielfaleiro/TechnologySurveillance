@@ -13,6 +13,7 @@ http://www.kicad-pcb.org/
 - Eclipse IDE C/C++
 https://www.eclipse.org/downloads/
 
-
+- Pycharm IDE Python
+https://www.jetbrains.com/pycharm/
 
 
