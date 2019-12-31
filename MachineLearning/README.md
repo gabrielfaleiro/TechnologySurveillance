@@ -27,8 +27,7 @@ intelligence.
 - **NumPy**: which is a math library to work with n-dimensional arrays in Python.
 - **SciPy**: which is a collection of numerical algorithms and domain-specific toolboxes, including signal processing, optimization, statistics and much more. SciPy is a good library for scientific and high-performance computation.
 - **Matplotlib**: which is a very popular plotting package that provides 2D plotting as well as 3D plotting.
-- **Pandas**: which is a very high-level python library that provides high-performance, easy
-to use data structures.
+- **Pandas**: which is a very high-level python library that provides high-performance, easy to use data structures.
 - **scikit-learn**: which is a collection of algorithms and tools for machine learning.
 
 ## Machine Learning
