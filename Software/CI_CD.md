@@ -1,5 +1,7 @@
 # Continuous Integration & Continuous Delivery
 
+- REF: https://levelup.gitconnected.com/heres-why-continuous-integration-and-deployment-is-so-important-to-the-software-development-c0caeead5881
+
 ## Version Control
 - GitHub (or similar): webhooks to notify events to the CI server
 
