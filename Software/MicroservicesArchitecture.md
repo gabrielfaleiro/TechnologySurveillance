@@ -51,6 +51,5 @@ Oposed to a monolithic architecture, it enables and facilitates CI, CD, project 
 (research)
 
 ## Platforms / Hosts
-
 - Ansible 
 (research)
