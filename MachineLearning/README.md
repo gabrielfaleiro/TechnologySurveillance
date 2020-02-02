@@ -15,11 +15,8 @@ Machine learning is the subfield of computer science that gives "computers the a
 - **Recommendation systems**: Recommending items
 
 ## Terminology
-- **Artificial Intelligence** (AI): Artificial Intelligence is a general field with a broad scope including: Computer Vision,
-Language Processing, Creativity, and Summarization. It tries to make computers intelligent in order to mimic the cognitive functions
-of humans.
-- **Machine Learning** (ML): Machine Learning is the branch of AI that covers the statistical part of artificial
-intelligence.
+- **Artificial Intelligence** (AI): Artificial Intelligence is a general field with a broad scope including: Computer Vision, Language Processing, Creativity, and Summarization. It tries to make computers intelligent in order to mimic the cognitive functions of humans.
+- **Machine Learning** (ML): Machine Learning is the branch of AI that covers the statistical part of artificial intelligence.
 - **Deep Learning**: Deep Learning is a very special field of Machine Learning where computers can actually learn and make intelligent decisions on their own. Deep learning involves a **deeper level of automation** in comparison with most machine learning algorithms.
 
 ## Python Packages for ML
@@ -28,7 +25,7 @@ intelligence.
 - **SciPy**: which is a collection of numerical algorithms and domain-specific toolboxes, including signal processing, optimization, statistics and much more. SciPy is a good library for scientific and high-performance computation.
 - **Matplotlib**: which is a very popular plotting package that provides 2D plotting as well as 3D plotting.
 - **Pandas**: which is a very high-level python library that provides high-performance, easy to use data structures.
-- **scikit-learn**: which is a collection of algorithms and tools for machine learning.
+- **Scikit-learn**: which is a collection of algorithms and tools for machine learning.
 
 ## Machine Learning
 
