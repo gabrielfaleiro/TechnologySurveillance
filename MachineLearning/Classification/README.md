@@ -76,4 +76,21 @@ Three model evaluation metrics covered here:
   - *F1 score* is the harmonic average of the precision and recall.
 - **Log Loss** / Logarithmic loss measures the performance of a classifier where the predicted output is a probability value between 0 and 1.
 
+## Decision Trees
+
+The basic intuition behind a decision tree is to map out all possible decision paths in the form of a tree.
+Decision trees are built by splitting the training set into distinct nodes, where one node contains all of, or most of, one category of the data.
+Decision trees are about testing an attribute and branching the cases, based on the result of the test.
+- Each *internal node* corresponds to a test. Ex/ Sex
+- And each *branch* corresponds to a result of the test. Ex/ Male or female
+- And each *leaf node* assigns a patient to a class.
+
+
+A decision tree can be constructed by considering the attributes one by one.
+1. Choose an attribute from our dataset.
+2. Calculate the significance of the attribute in the splitting of the data. (evaluate if it's an effective attribute or not)
+3. Split the data based on the value of the best attribute.
+4. Go to each branch and repeat it for the rest of the attributes.
+
+
 
