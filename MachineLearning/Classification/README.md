@@ -92,5 +92,20 @@ A decision tree can be constructed by considering the attributes one by one.
 3. Split the data based on the value of the best attribute.
 4. Go to each branch and repeat it for the rest of the attributes.
 
+### Implementing Decision trees
+- Decision trees are built using recursive partitioning to classify the data.
+- The algorithm chooses the most predictive feature to split the data on: determine “which attribute is the
+best, or more predictive, to split data based on the feature.”
+  - More predictiveness
+  - Less impurity
+  - Lower entropy
+- Selection of the attribute to split is all about "**purity**" of the leaves: A node in the tree is considered “pure” if, in 100% of the cases, the nodes fall into a specific category of the target field.
+  - In fact, the method uses recursive partitioning to split the training records into segments by minimizing the “impurity” at each step.
+- **”Impurity”** of nodes is calculated by **“Entropy”** of data in the node: Entropy is the amount of information disorder, or the amount of randomness in the data.
+  - If the samples are completely homogeneous the entropy is zero and if the samples are equally divided, it has an entropy of one.
+- **Information gain** is the information that can increase the level of ertainty after splitting.
+
+
+
 
 
