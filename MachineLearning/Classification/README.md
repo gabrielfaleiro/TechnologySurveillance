@@ -105,7 +105,39 @@ best, or more predictive, to split data based on the feature.”
   - If the samples are completely homogeneous the entropy is zero and if the samples are equally divided, it has an entropy of one.
 - **Information gain** is the information that can increase the level of ertainty after splitting.
 
+## Logistic Regression
 
+Logistic regression is analogous to linear regression but tries to predict a categorical or discrete target field instead of a numeric one: binary or multiclass classification
+- dependent variable (Y) should be discrete
+- independent variables (X) should be continuous; if categorical, they should be dummy or indicator-coded.
+
+Here are four situations in which Logistic regression is a good candidate:
+1. First, when the *target field* in your data *is categorical*, or specifically, is binary,
+2. Second, you need the *probability of your prediction* (0-1)
+  - In fact, logistic regressing predicts the probability of that sample, and we map the cases to a discrete class based on that probability.
+3. Third, if your data is linearly separable.
+  - The decision boundary of logistic regression is a line or a plane or a hyper-plane.
+  - Please note that in using logistic regression, we can also achieve a complex decision boundary using polynomial processing as well.
+4. Fourth, you need to understand the impact of a feature.
+
+- y: actual values or labels vector
+- y^ or y_hat: predicted values
+
+### Logistic Regression vs Linear Regression
+
+**Sigmoid function**, which is the main part of logistic regression: sigmoid of θ^T X gives us the probability of a point belonging to a class, instead of the value of y directly.
+
+
+- Training process
+  1. Initialise theta with random values
+  2. Calculate model output y^ for a sample customer
+  3. Calculate error = y - y^
+  4. Calculate error for all customers and add up them: Cost function = J(theta)
+  5. Change theta to reduce the cost
+  6. Iterate proess
+
+There are different ways to **iterate the values of θ**, but *one of the most popular* ways is **gradient descent**.
+Stop iteration when accuracy of the model is good enough.
 
 
 
