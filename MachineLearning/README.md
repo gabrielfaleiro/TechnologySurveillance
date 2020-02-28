@@ -26,6 +26,8 @@ Machine learning is the subfield of computer science that gives "computers the a
 - **Matplotlib**: which is a very popular plotting package that provides 2D plotting as well as 3D plotting.
 - **Pandas**: which is a very high-level python library that provides high-performance, easy to use data structures.
 - **Scikit-learn**: which is a collection of algorithms and tools for machine learning.
+- **Keras**: *fast prototyping*, easier ML and DL. GPU support.
+- **TensorFlow**: ML and DL tool set. Python and C++ (Dev by google). *Most used DL framework*
 
 ## Machine Learning
 

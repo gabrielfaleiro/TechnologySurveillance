@@ -132,12 +132,52 @@ Here are four situations in which Logistic regression is a good candidate:
   1. Initialise theta with random values
   2. Calculate model output y^ for a sample customer
   3. Calculate error = y - y^
-  4. Calculate error for all customers and add up them: Cost function = J(theta)
+  4. Calculate error for all customers and add up them: **Cost function = J(theta)**
   5. Change theta to reduce the cost
-  6. Iterate proess
+  6. Iterate process
 
-There are different ways to **iterate the values of θ**, but *one of the most popular* ways is **gradient descent**.
+There are different ways to **iterate the values of θ**, but *one of the most popular* ways is **gradient descent**. (in our case, gradient descent is a technique to use the derivative of a cost function to change the parameter values, to minimize the cost or error.)
 Stop iteration when accuracy of the model is good enough.
 
+- Gradient descent
+  1. Initialise theta with random values
+  2. Calculate the cost/error J(theta)
+  3. Calculate the gradient cost function
+  4. Update the weights with new parameter values.
+  5. Iterate until small enough error
 
+## Support Vector Machines (SVMs)
+You can use support vector machine, or SVM, as a classifier, to train your model to understand patterns within the data.
+A Support Vector Machine is a supervised algorithm that can classify cases by finding a separator.
+SVM works by first, mapping data to a high-dimensional feature space so that data points can be categorized,
+The data should be transformed in such a way that a separator could be drawn as a hyperplane.
+Linearly, non-separable dataset, which is the case for most real-world datasets.
+Therefore, the SVM algorithm outputs an optimal hyperplane that categorizes new examples.
+Mapping data into a higher dimensional space is called **kernelling**. The mathematical function used for the transformation is known as the kernel function, types:
+- Linear
+- Polynomial
+- Radial basis function (RBF)
+- Sigmoid
+As there's no easy way of knowing which function performs best with any given dataset, we usually choose different functions in turn and compare the results.
+
+The goal is to choose a hyperplane with as big a margin as possible: the largest separation, or margin, between the two classes.
+Examples closest to the hyperplane are support vectors. (It is intuitive that only support vectors matter for achieving our goal)
+This optimization problem can also be solved by gradient descent.
+
+Advantages:
+- accurate in high dimensional spaces
+- memory efficient (they use a subset of training points in the decision function, support vectors)
+
+Disadvantages:
+- prone for over-fitting, if the number of features is much greater than the number of samples.
+- no probability estimation
+- not very efficient computationally, if your dataset is very big (rows > 1000)
+
+Usability:
+- Image recognition
+- Text category assignment / minning
+- Detect spam
+- Sentiment analysis
+- Gene Expression data classification
+- regression, outlier detection, and clustering
 
