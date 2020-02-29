@@ -30,8 +30,7 @@ Types of classification algorithms in ML:
 The k-nearest-neighbors algorithm is a classification algorithm that takes a bunch of labelled points and uses them to learn how to label other points.
 - This algorithm classifies cases based on their similarity to other cases.
 - Data points that are near each other are said to be **neighbors**
-- Based on **Similar cases with the same class labels
-are near each other** Thus, the **distance between two cases is a measure of their dissimilarity**. (Different ways of calculate this distance)
+- Based on **Similar cases with the same class labels are near each other**. Thus, the **distance between two cases is a measure of their dissimilarity**. (Different ways of calculate this distance)
 
 Algorithm:
 1. Pick a value for K.
