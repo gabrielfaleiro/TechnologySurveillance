@@ -53,3 +53,7 @@ Oposed to a monolithic architecture, it enables and facilitates CI, CD, project 
 ## Platforms / Hosts
 - Ansible 
 (research)
+
+## Clustering
+- proxmox
+(research)

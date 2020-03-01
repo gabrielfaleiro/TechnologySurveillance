@@ -6,8 +6,8 @@
 - GitHub (or similar): webhooks to notify events to the CI server
 
 ## CI
+- GitLab: cloud based, version control, CI/CD
 - Jenkins: fully customizable, server based, open source, free (big projects)
-- Tarvis CI: commercial, free for open source, cloud based, excelent github integration, fast setup (open source and small projects)
 - REF: https://www.guru99.com/jenkins-vs-travis.html
 
 ## CD
