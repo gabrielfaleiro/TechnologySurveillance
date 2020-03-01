@@ -46,7 +46,6 @@ In other words, conventionally, the distance of samples from each other is used 
 - **k-Means tries to minimize the “intra-cluster” distances and maximize the “inter-cluster” distances.**
 - Of course, we have to normalize our feature set to get the accurate dissimilarity measure.
 
-
 There are other **dissimilarity measures** 
 - it is highly *dependent on data type* 
 - and also *the domain that clustering is done for it*.
@@ -63,12 +62,95 @@ How it works:
 - Choose centroids:
   1. We can randomly choose 3 observations out of the dataset and use these observations as the initial means.
   2. Random points
-
-- Assign each object to the closest cluster respect to its centroid selecting an appropiate distance measure
-- Therefore, you will form a matrix where each row represents the distance of a custome from each centroid. It is called the "distance-matrix."
-- Model error can be calculated respect to each centroid: SSE
-
-  3. each cluster center will be updated to be the mean for data points in its cluster
+  3. Assign each object to the closest cluster respect to its centroid selecting an appropiate distance measure
+    - Therefore, you will form a matrix where each row represents the distance of a custome from each centroid. It is called the "distance-matrix."
+    - Model error can be calculated respect to each centroid: SSE
+  4. each cluster center will be updated to be the *mean for data points in its cluster*
+  5. Iterate until centroids no longer move
 
 However, as it is a **heuristic algorithm**, **there is no guarantee that it will converge to the global optimum**
 To solve this problem, it is common to **run the whole process, multiple times, with different starting conditions**.
+
+Notes:
+- K-Means Clustering isn't directly applicable to categorical variables because Euclidean distance function isn't really meaningful for discrete variables
+
+### Evaluate resulting clusters (Accuracy)
+External approach:
+- Compare results with ground truth (usually not available since it is an unsupervised algorithm)
+Internal approach:
+- Average distance between data points within a cluster or compared to their centroids
+
+Ussual approach to choose the best k value is to compare metric of accuracy results with their associated k values.
+Examples:
+- mean distance between data points and their cluster centroid
+- however, the larger K the better accuracy
+- **Elbow method**: plotting these values will be seen a change in the slope or elbow point, where the rate of decrease sharply shifts. This is the right k value for clustering
+
+
+## Hierarchical Clustering
+Hierarchical clustering algorithms build a hierarchy of clusters where each node is a cluster consisting of the clusters of its daughter nodes.
+Strategies for hierarchical clustering generally fall into two types: 
+- Divisive: Divisive is top-down, so you start with all observations in a large cluster and break it down into smaller pieces.
+- Agglomerative: is bottom-up, where each observation starts in its own cluster and pairs of clusters are merged together as they move up the hierarchy.
+The Agglomerative approach is more popular among data scientists.
+
+### Agglomerative Clustering
+
+feature can be multi-dimensional, and distance measurement can be either Euclidean, Pearson, average
+distance, or many others, depending on data type and domain knowledge.
+
+New distant measurement is calculated for the merged cluster and the rest of the nodes / cluster
+
+Hierarchical clustering is **typically visualized as a dendrogram**
+
+Characteristics:
+- Hierarchical clustering does not require a pre-specified number of clusters.
+- However, in some applications we want a partition of disjoint clusters just as in flat clustering, cutting in a specific level of similarity.
+
+1. Create n clusters, one for each data point
+2. Compute de Distance / Proximity Matrix (n x n)
+3. Repeat
+  1. Merge the two nearest clusters
+  2. Update the proximity matrix
+4. Until only a single cluster remains or the specified number of clusters is reached
+
+the key operation is the computation of the proximity between the clusters with one point, and also clusters with multiple data points.
+
+Distance between points:
+- Euclidean distance
+
+Distance between clusters: 
+- **Single-Linkage Clustering**: Minimum distance between clusters, between 2 different points of each cluster
+- **Complete-Linkage Clustering**: Maximum distance between clusters, between 2 different points of each cluster
+- **Average-Linkage Clustering**: Average distance between clusters, average distance of each point from one cluster to every point in another cluster
+- **Centroid-Linkage Clustering**: Minimum distance between cluster centroids. Centroids are the average of the feature sets of points in a cluster
+
+In general, it completely depends on the data type, dimensionality of data, and most importantly, the domain knowledge of the dataset.
+
+In fact, different approaches to defining the distance between clusters, distinguish the different algorithms.
+
+Advantages:
+1. Does not require a number of lusters to be specified
+2. Easy to implement
+3. Dendrograms are very useful in understanding the data
+
+Disadvantages:
+1. Can never undo any previous steps
+2. Generally has long computation times, compared for example with k-Means
+3. With large datasets it can be difficult to determine the correct number of clusters by the dendrogram
+
+### Comparing k-Means and Hierarchical clustering
+
+k-Means
+- More efficient for large datasets
+- Requires the number of clusters to be specified
+- Gives only one partitioning of the data based on the predefined number of clusters
+- Potentially returns different clusters each time due to random initialisation of centroids
+
+Hierarchical clustering
+- Can be slow for large datasets
+- Does not require the number of clusters to be specified
+- Gives more than one partitioning depending on the resolution, it only has to be divided at any chosen level in the dendrogram
+- Always generates the same clusters
+
+
