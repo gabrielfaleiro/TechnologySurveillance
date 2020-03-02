@@ -180,7 +180,7 @@ plt.title('Clusters')
 plt.xlabel('horsepow')
 plt.ylabel('mpg')
 
-# 2 types of vehicles in our dataset, "truck" (value of 1 in the type column) and "car" (value of 1 in the type column)
+# 2 types of vehicles in our dataset, "truck" (value of 0 in the type column) and "car" (value of 1 in the type column)
 # Count number of cases in each cluster
 pdf.groupby(['cluster_','type'])['cluster_'].count()
 
