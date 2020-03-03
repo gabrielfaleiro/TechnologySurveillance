@@ -30,7 +30,7 @@ Clustering algorithms:
 - Hierarchical clustering
   - produce trees of clusters, such as *Agglomerative* and *Divisive* algorithms
   - Intuitive and used for small sets of data
-- Density based clustering
+- Density-based clustering
   - produce arbitrary shaped clusters
   - especially good when dealing with *spatial clusters* or when there is *noise in your dataset*, for example, the *DBSCAN* algorithm.
 
@@ -153,4 +153,35 @@ Hierarchical clustering
 - Gives more than one partitioning depending on the resolution, it only has to be divided at any chosen level in the dendrogram
 - Always generates the same clusters
 
+## Density-based clustering (DBSCAN)
+
+- with arbitrary shape clusters, or clusters within clusters, traditional techniques (k-means, hierarchical, and fuzzy clustering) might not be able to achieve good results
+- no notion of outliers
+- locates regions of high density that are separated from one another by regions of low density
+  - Density, in this context, is defined as the number of points within a specified radius
+
+*DBSCAN - DBSCAN stands for Density-Based Spatial Clustering of Applications with Noise.* 
+Advantages:
+- DBSCAN, a density-based clustering algorithm, which is appropriate to use when examining spatial data.
+- DBSCAN algorithm is that it can find out any arbitrary shape cluster without getting affected by noise
+  - It can even find a cluster completely surrounded by a different cluster.
+- DBSCAN has a notion of noise, and is robust to outliers.
+- does not require one to specify the number of clusters
+
+It works based on 2 parameters: 
+- **Radius**: R determines a specified radius that, if it includes enough points within it, we call it a "dense area." 
+- **Minimum Points**: M determines the minimum number of data points we want in a neighborhood to define a cluster.
+
+
+Each point in our dataset can be either a 
+- **core** point: if, within R-neighborhood of the point, there are at least M points. 
+- **border** point: if:
+  a. Its neighborhood contains less than M data points, or
+  b. It is reachable from some core point (it is within R-distance
+from a core point)
+- **outlier** point: any other point, it is not a core point, and also, is not close enough to be reachable from a core point.
+
+
+The next step is to connect core points that are neighbors, and put them in the same cluster.
+So, a cluster is formed as at least one core point, plus all reachable core points, plus all their borders.
 
